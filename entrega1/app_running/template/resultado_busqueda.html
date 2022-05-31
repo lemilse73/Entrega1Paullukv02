@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      {% if corredor %}
+
+        <ul>
+            {% for corredor in corredor %}
+                <li>Nombre: {{corredor.nombre}}</li> 
+                <li>Apellido: {{corredor.apellido}}</li>  
+                <li>Modalidad: {{corredor.modalidad}}</li>
+                <li>Email: {{corredor.email}}</li>
+                <li>Teams: {{corredor.team}}</li>
+    
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>No se encontraron datos</p>
+        
+        {% endif %}
+
+  
+</body>

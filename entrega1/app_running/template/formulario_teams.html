@@ -1,0 +1,25 @@
+{% extends "padre.html" %}
+
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+    <form action = "alta_teams" method="POST">
+        {% csrf_token %}
+        <p>Nombre:</p>
+        <input type="text" name="nombre" required> 
+        <p>Modalidad:</p>
+        <input type="text" name="modalidad" required>
+        <p>Email:</p>
+        <input type="email" name="email" required>
+       
+        <input type="submit" value="Enviar">
+
+
+    </form>
+
+
+{% endblock %}
